@@ -1,5 +1,53 @@
 import { FEATURES } from '@/lib/data'
 
+function Icon({ name, className }: { name: string; className?: string }) {
+  const base = `inline-block ${className ?? ''}`.trim()
+  switch (name) {
+    case 'materials':
+      return (
+        <svg className={base} viewBox="0 0 24 24" fill="none" aria-hidden>
+          <rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M3 11h18" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      )
+    case 'expertise':
+      return (
+        <svg className={base} viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M12 2l2.6 5.3L20 8.2l-4 3.5L17 18l-5-2.6L7 18l1-6.3L4 8.2l5.4-.9L12 2z" stroke="currentColor" strokeWidth="1" fill="currentColor" />
+        </svg>
+      )
+    case 'manufacturing':
+      return (
+        <svg className={base} viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M3 13h18v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M6 13V8l4-2v7" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      )
+    case 'design':
+      return (
+        <svg className={base} viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M3 21l6-6 4 4 8-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <circle cx="7" cy="17" r="1.2" fill="currentColor" />
+        </svg>
+      )
+    case 'service':
+      return (
+        <svg className={base} viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M3 12h6l2 6 4-10 6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        </svg>
+      )
+    case 'warehousing':
+      return (
+        <svg className={base} viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M3 9l9-4 9 4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M12 5v14" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      )
+    default:
+      return <span className={base} />
+  }
+}
+
 export default function WhyUs() {
   return (
     <section className="py-24 bg-dark relative overflow-hidden">
@@ -27,7 +75,9 @@ export default function WhyUs() {
               key={i}
               className="group bg-white/3 border border-white/8 rounded-xl p-8 hover:bg-gold/8 hover:border-gold/30 transition-all duration-300"
             >
-              <div className="text-4xl mb-5">{feature.icon}</div>
+              <div>
+                <Icon name={feature.icon} className="w-10 h-10 mb-5 text-gold group-hover:text-gold" />
+              </div>
               <h3 className="font-serif text-xl text-white mb-3 group-hover:text-gold transition-colors">
                 {feature.title}
               </h3>

@@ -97,37 +97,37 @@ export const PRODUCTS = [
 
 export const FEATURES = [
   {
-    icon: '🪵',
+    icon: 'materials',
     title: 'Premium Materials',
     description:
       'We source only the finest quality wood and fabrics — solid sheesham, teak, and MDF — ensuring every piece has the strength and beauty to stand the test of time.',
   },
   {
-    icon: '🏆',
+    icon: 'expertise',
     title: '40+ Years of Expertise',
     description:
       'Four decades of continuous refinement in design, craftsmanship, and customer service give us an edge that newer companies simply cannot match.',
   },
   {
-    icon: '🏭',
+    icon: 'manufacturing',
     title: 'Own Manufacturing Unit',
     description:
       'Our 2,000 sq. m. factory in Faridabad gives us complete control over quality, design, and delivery — no outsourcing, no compromises.',
   },
   {
-    icon: '🎨',
+    icon: 'design',
     title: 'Custom Designs',
     description:
       'We collaborate closely with each buyer to create bespoke furniture that matches their exact tastes, space constraints, and budget requirements.',
   },
   {
-    icon: '🤝',
+    icon: 'service',
     title: 'Buyer-Centric Approach',
     description:
       'From the first consultation to final delivery and setup, we attend closely to every specific need of our buyers — with sincerity and care.',
   },
   {
-    icon: '📦',
+    icon: 'warehousing',
     title: 'In-House Warehousing',
     description:
       'Our large warehousing facility ensures rapid order fulfillment and safe, careful handling of every piece until it arrives at your doorstep.',
